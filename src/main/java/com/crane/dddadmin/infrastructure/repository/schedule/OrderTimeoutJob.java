@@ -1,6 +1,7 @@
 package com.crane.dddadmin.infrastructure.repository.schedule;
 
 import com.crane.dddadmin.application.service.OrderAppService;
+import com.crane.dddadmin.infrastructure.repository.trace.ScheduledTrace;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
