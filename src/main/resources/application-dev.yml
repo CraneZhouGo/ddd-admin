@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ddd-admin
+
+logging:
+  level:
+    root: DEBUG
+    com.crane.ddd-admin:
+      interfaces: DEBUG
+      application: INFO
+      domain: DEBUG
+      infrastructure: DEBUG
