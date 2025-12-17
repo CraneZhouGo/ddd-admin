@@ -1,6 +1,7 @@
 package com.crane.dddadmin.interfaces.web;
 
 import com.crane.dddadmin.application.service.OrderAppService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * @Date 2025-12-16 16:05:00
  * @Version 1.0
  **/
+@Slf4j
 @RestController
 @RequestMapping("/orders")
 public class OrderController {

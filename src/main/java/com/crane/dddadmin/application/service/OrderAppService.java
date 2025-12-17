@@ -28,8 +28,6 @@ public class OrderAppService {
     @Transactional
     public void create() {
         Order order = Order.create();
-        log.info("info log");
-        log.debug("debug log");
         log.info(">>> createOrder() 被调用");
         orderRepository.save(order);
     }

@@ -1,8 +1,30 @@
 spring:
   application:
     name: ddd-admin
+  #禁用模板引擎缓存（如Thymeleaf）
+  thymeleaf:
+    cache: false
+  # 禁用静态资源缓存（CSS/JS/HTML）
+  web:
+    resources:
+      cache:
+        period: 0
+  # DevTools 重启排除无需监控的目录（优化重启速度）
+  devtools:
+    restart:
+      exclude: static/**,public/**,resources/**,templates/**,target/**,lib/**
+    # 仅当修改 .java 文件或 application.yml 时触发重启
+      enabled: true
+      additional-paths:
+        src/main/java,src/main/resources:
+
   profiles:
-    active: prod
+    active: dev
 
 logging:
+  level:
+    # 彻底关闭条件化配置报告日志（OFF 级别表示完全禁用）
+    org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener: OFF
+    # 可选：屏蔽自动配置类的冗余日志
+    org.springframework.boot.autoconfigure: WARN
   config: classpath:logback-spring.xml
