@@ -18,7 +18,6 @@ import org.springframework.transaction.annotation.Transactional;
 public class OrderAppService {
     private final OrderRepository orderRepository;
 
-    //private static final Logger log = LoggerFactory.getLogger(OrderAppService.class);
 
     public OrderAppService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
@@ -30,5 +29,10 @@ public class OrderAppService {
         Order order = Order.create();
         log.info(">>> createOrder() 被调用");
         orderRepository.save(order);
+    }
+
+    public void checkTimeoutOrders() {
+        log.info("[BIZ] checking timeout orders");
+        // 业务逻辑
     }
 }

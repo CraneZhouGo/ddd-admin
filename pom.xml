@@ -67,6 +67,12 @@
             <scope>runtime</scope>
             <optional>true</optional> <!-- 防止依赖传递 -->
         </dependency>
+
+        <!-- AOP -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
     </dependencies>
 
 

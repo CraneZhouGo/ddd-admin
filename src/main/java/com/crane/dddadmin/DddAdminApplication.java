@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+//@EnableScheduling // 开启Spring自带 @Scheduled 定时任务 开关未开
 public class DddAdminApplication {
 
     public static void main(String[] args) {
